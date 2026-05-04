@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fast Freios — Brand Design System
+   All colors MUST be HSL. Tokens only.
+*/
+
+@layer base {
+  :root {
+    /* Brand */
+    --background: 0 0% 5%;            /* #0D0D0D Preto Profundo */
+    --foreground: 0 0% 100%;
+    --surface: 0 0% 10%;              /* near-black panels */
+    --surface-2: 0 0% 16%;            /* #2A2A2A Cinza Escuro */
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 75%;     /* #BFBFBF Cinza Claro */
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 14 100% 56%;           /* #FF5A1F Laranja Fast */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 18 100% 60%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 14 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 14 100% 56%;
+
+    --radius: 0.25rem;
+
+    /* Effects */
+    --gradient-fire: linear-gradient(135deg, hsl(14 100% 56%), hsl(28 100% 55%));
+    --gradient-edge: linear-gradient(90deg, transparent, hsl(14 100% 56%), transparent);
+    --shadow-orange: 0 20px 60px -15px hsl(14 100% 56% / 0.5);
+    --shadow-deep: 0 30px 80px -20px hsl(0 0% 0% / 0.8);
+    --glow-orange: 0 0 40px hsl(14 100% 56% / 0.45);
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 14 100% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 14 100% 56%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+}
+
+@layer components {
+  .font-display { font-family: "Anton", "Bebas Neue", Impact, sans-serif; letter-spacing: 0.01em; }
+  .font-display-tight { font-family: "Anton", "Bebas Neue", Impact, sans-serif; letter-spacing: -0.01em; }
+
+  /* Diagonal stripes used as decorative blocks */
+  .diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      135deg,
+      hsl(14 100% 56%) 0 14px,
+      hsl(0 0% 5%) 14px 28px
+    );
+  }
+  .diagonal-stripes-muted {
+    background-image: repeating-linear-gradient(
+      135deg,
+      hsl(0 0% 22%) 0 10px,
+      hsl(0 0% 8%) 10px 20px
+    );
+  }
+
+  /* Angular orange block (parallelogram) */
+  .clip-angular {
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+  .clip-angular-r {
+    clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
+  }
+  .clip-notch {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px hsl(var(--primary));
+    color: transparent;
+  }
+
+  .glow-line {
+    background: var(--gradient-edge);
+    height: 1px;
+  }
+
+  .orange-glow { box-shadow: var(--glow-orange); }
+}
+
+@layer utilities {
+  .bg-fire { background: var(--gradient-fire); }
+  .shadow-orange { box-shadow: var(--shadow-orange); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-ticker { animation: ticker 30s linear infinite; }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  .animate-glow-pulse { animation: glow-pulse 2.5s ease-in-out infinite; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 0.7s ease-out both; }
+}
