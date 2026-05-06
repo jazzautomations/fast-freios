@@ -27,11 +27,11 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[110px] uppercase leading-[0.88] text-foreground">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[110px] uppercase leading-[1.1] text-foreground tracking-wide">
             Segurança
-            <br />
+            <br className="my-4" />
             em qualquer
-            <br />
+            <br className="my-4" />
             <span className="relative inline-block">
               <span className="relative z-10 text-primary">parada.</span>
               <span aria-hidden className="absolute inset-x-0 bottom-2 h-3 bg-primary/20 blur-md" />
@@ -77,8 +77,8 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative">
-          <div className="relative aspect-square bg-surface border border-border overflow-hidden clip-notch">
+        <div className="lg:col-span-6 relative">
+          <div className="relative aspect-[4/3] bg-surface border border-border overflow-hidden clip-notch">
             <img
               src={heroBrake}
               alt="Disco de freio incandescente em carro esportivo preto"

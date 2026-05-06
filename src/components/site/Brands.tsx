@@ -38,28 +38,23 @@ export const Brands = () => (
         </div>
 
         <div className="flex-1">
-          {/* Mobile: horizontal scroll | Desktop: 3-column grid */}
           <div className="flex md:grid md:grid-cols-3 gap-3 overflow-x-auto md:overflow-visible -mx-3 px-3 md:mx-0 md:px-0 md:gap-4">
             {brands.map((b) => (
-              <a
+              <div
                 key={b.name}
-                href={b.url}
-                target="_blank"
-                rel="noreferrer"
-                title={`${b.name} — ${b.desc}`}
-                className="group flex-shrink-0 w-[140px] md:w-auto flex flex-col items-center justify-center gap-2.5 border border-border bg-surface/30 p-4 md:p-6 hover:border-primary hover:bg-surface transition-all"
+                className="group flex-shrink-0 w-[140px] md:w-auto flex flex-col items-center justify-center gap-2.5 bg-transparent p-4 md:p-6"
               >
-                <div className="h-10 flex items-center justify-center w-full">
+                <div className="h-12 md:h-14 flex items-center justify-center w-full">
                   <img
                     src={b.logo}
                     alt={`Logo ${b.name}`}
-                    className="max-h-9 max-w-[110px] w-auto object-contain opacity-80 group-hover:opacity-100 transition-all duration-300"
+                    className="max-h-12 md:max-h-14 max-w-[160px] w-auto object-contain"
                   />
                 </div>
-                <span className="text-[9px] uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors font-semibold text-center leading-tight">
+                <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-semibold text-center leading-tight">
                   {b.desc}
                 </span>
-              </a>
+              </div>
             ))}
           </div>
         </div>
