@@ -15,9 +15,49 @@ import { MapSection } from "@/components/site/MapSection";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 
+const servicesList = [
+  "Troca de pastilhas de freio",
+  "Troca de discos de freio",
+  "Sangria de fluido de freio",
+  "Diagnóstico de freio ABS",
+  "Revisão completa de freios",
+  "Suspensão completa",
+  "Alinhamento e balanceamento",
+  "Calibração de nitrogênio nos pneus",
+];
+
+const faqItems = [
+  { question: "O diagnóstico é realmente grátis?", answer: "Sim. Fazemos avaliação completa do sistema de freio sem custo. Você recebe um laudo técnico com tudo o que precisa ser feito." },
+  { question: "Quanto tempo leva o diagnóstico?", answer: "Em média 20 minutos. Verificamos pastilhas, discos, fluido, mangueiras e sistema ABS." },
+  { question: "Trabalhamos com garantia?", answer: "Sim. Todas as peças têm garantia do fabricante e oferecemos garantia da mão de obra." },
+  { question: "Preciso agendar?", answer: "Não é obrigatório, mas recomendamos. Assim garantimos que o seu carro seja atendido no horário ideal para você." },
+  { question: "Vocês atendem só freios ou suspensão também?", answer: "Freios, suspensão, alinhamento, balanceamento e calibração de nitrogênio. Cuidamos de tudo que faz o seu carro parar e andar com segurança." },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    // ── Organization ──
+    {
+      "@type": "Organization",
+      "@id": "https://fastfreios.com.br/#org",
+      name: "Fast Freios",
+      url: "https://fastfreios.com.br/",
+      logo: "https://fastfreios.com.br/logo.png",
+      sameAs: [
+        "https://www.instagram.com/fastfreios/",
+        "https://www.facebook.com/fastfreiospiracicaba",
+        "https://wa.me/5519999338747",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+55-19-99933-8747",
+        contactType: "customer service",
+        availableLanguage: "Portuguese",
+        areaServed: "Piracicaba",
+      },
+    },
+    // ── LocalBusiness (AutoRepair) ──
     {
       "@type": "AutoRepair",
       "@id": "https://fastfreios.com.br/#business",
@@ -81,24 +121,34 @@ const jsonLd = {
         bestRating: "5",
       },
       areaServed: [
-        {
-          "@type": "City",
-          name: "Piracicaba",
-          "@id": "https://www.wikidata.org/wiki/Q174987",
-        },
+        { "@type": "City", name: "Piracicaba" },
+        { "@type": "State", name: "São Paulo" },
       ],
-      serviceType: [
-        "Troca de pastilhas de freio",
-        "Troca de discos de freio",
-        "Sangria de fluido de freio",
-        "Diagnóstico de freio ABS",
-        "Revisão completa de freios",
-        "Diagnóstico grátis de freios",
-        "Suspensão completa",
-        "Alinhamento e balanceamento",
-        "Calibração de nitrogênio nos pneus",
-      ],
+      // ── Service schema per service ──
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Serviços Fast Freios",
+        url: "https://fastfreios.com.br/#servicos",
+        offers: servicesList.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s },
+        })),
+      },
     },
+    // ── FAQPage ──
+    {
+      "@type": "FAQPage",
+      "@id": "https://fastfreios.com.br/#faq",
+      mainEntity: faqItems.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answer,
+        },
+      })),
+    },
+    // ── WebSite ──
     {
       "@type": "WebSite",
       "@id": "https://fastfreios.com.br/#website",
@@ -106,8 +156,17 @@ const jsonLd = {
       name: "Fast Freios Piracicaba",
       description: "Especialistas em freios e suspensão automotiva em Piracicaba SP",
       inLanguage: "pt-BR",
-      publisher: { "@id": "https://fastfreios.com.br/#business" },
+      publisher: { "@id": "https://fastfreios.com.br/#org" },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://fastfreios.com.br/?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
     },
+    // ── BreadcrumbList ──
     {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -143,7 +202,6 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
