@@ -15,7 +15,7 @@ const brands = [
   },
   {
     name: "Nakata",
-    logo: "/logo-nakata.jpeg",
+    logo: "/logo-nakata.webp",
     desc: "Suspensão e direção",
     url: "https://www.nakata.com.br",
   },
