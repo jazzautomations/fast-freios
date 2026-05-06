@@ -52,13 +52,13 @@ export const Header = () => {
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-4 py-3 border border-primary text-primary font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            <MessageCircle className="h-4 w-4" /> Whats
+            <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
           <a
-            href="#contato"
-            className="inline-flex items-center px-5 py-3 bg-primary text-primary-foreground font-bold uppercase text-xs tracking-widest clip-notch hover:brightness-110 transition orange-glow"
+            href="#checkup"
+            className="inline-flex items-center px-5 py-3 bg-primary text-primary-foreground font-bold uppercase text-xs tracking-widest hover:brightness-110 transition orange-glow"
           >
-            Agende Agora
+            Checkup Gratuito
           </a>
         </div>
 
@@ -91,11 +91,11 @@ export const Header = () => {
               </a>
             ))}
             <a
-              href="#contato"
+              href="#checkup"
               onClick={() => setOpen(false)}
-              className="mt-6 inline-flex items-center justify-center px-6 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest clip-notch"
+              className="mt-6 inline-flex items-center justify-center px-6 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-widest"
             >
-              Agende Agora
+              Checkup Gratuito
             </a>
           </nav>
         </div>

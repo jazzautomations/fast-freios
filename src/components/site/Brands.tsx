@@ -1,0 +1,66 @@
+import { ShieldCheck } from "lucide-react";
+
+const brands = [
+  {
+    name: "Fremax",
+    logo: "/logo-fremax.png",
+    desc: "Discos e tambores de freio",
+    url: "https://www.fremax.com.br",
+  },
+  {
+    name: "Fras-le",
+    logo: "/logo-frasle.jpg",
+    desc: "Pastilhas e lonas de freio",
+    url: "https://www.frasle.com",
+  },
+  {
+    name: "Nakata",
+    logo: "/logo-nakata.jpeg",
+    desc: "Suspensão e direção",
+    url: "https://www.nakata.com.br",
+  },
+];
+
+export const Brands = () => (
+  <section className="py-16 md:py-20 border-y border-border bg-background">
+    <div className="container">
+      <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
+        <div className="flex-shrink-0 md:border-r md:border-border md:pr-12">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <ShieldCheck className="h-5 w-5 text-primary" />
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Loja Autorizada
+            </span>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-[180px] leading-relaxed">
+            Trabalhamos somente com as melhores marcas do mercado.
+          </p>
+        </div>
+
+        <div className="flex-1 grid grid-cols-3 gap-4 md:gap-6">
+          {brands.map((b) => (
+            <a
+              key={b.name}
+              href={b.url}
+              target="_blank"
+              rel="noreferrer"
+              title={`${b.name} — ${b.desc}`}
+              className="group flex flex-col items-center justify-center gap-3 border border-border bg-surface/30 p-5 md:p-8 hover:border-primary hover:bg-surface transition-all"
+            >
+              <div className="h-10 flex items-center justify-center">
+                <img
+                  src={b.logo}
+                  alt={`Logo ${b.name}`}
+                  className="max-h-10 max-w-[130px] w-auto object-contain opacity-80 group-hover:opacity-100 transition-all duration-300"
+                />
+              </div>
+              <span className="text-[10px] uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors font-semibold text-center">
+                {b.desc}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);

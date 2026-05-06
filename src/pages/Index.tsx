@@ -9,7 +9,11 @@ import { TipBlock } from "@/components/site/TipBlock";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Faq } from "@/components/site/Faq";
 import { CtaBanner } from "@/components/site/CtaBanner";
+import { CheckupForm } from "@/components/site/CheckupForm";
+import { Brands } from "@/components/site/Brands";
+import { MapSection } from "@/components/site/MapSection";
 import { Footer } from "@/components/site/Footer";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -21,7 +25,7 @@ const jsonLd = {
       alternateName: "Fast Freios Piracicaba",
       slogan: "Segurança em qualquer parada",
       description:
-        "Especialistas em freios automotivos em Piracicaba SP. Troca de pastilhas, discos, fluido de freio, revisão completa e diagnóstico de freio ABS. Diagnóstico grátis em 20 minutos com laudo técnico.",
+        "Especialistas em freios e suspensão automotiva em Piracicaba SP. Troca de pastilhas, discos, fluido de freio, revisão completa, suspensão, alinhamento e diagnóstico de freio ABS. Diagnóstico grátis em 20 minutos com laudo técnico. Loja autorizada Fremax, Frasle e Nakata.",
       url: "https://fastfreios.com.br/",
       telephone: "+55-19-3490-0304",
       email: "contato@fastfreios.com.br",
@@ -72,7 +76,7 @@ const jsonLd = {
       },
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.9",
+        ratingValue: "5",
         reviewCount: "200",
         bestRating: "5",
       },
@@ -90,6 +94,9 @@ const jsonLd = {
         "Diagnóstico de freio ABS",
         "Revisão completa de freios",
         "Diagnóstico grátis de freios",
+        "Suspensão completa",
+        "Alinhamento e balanceamento",
+        "Calibração de nitrogênio nos pneus",
       ],
     },
     {
@@ -97,7 +104,7 @@ const jsonLd = {
       "@id": "https://fastfreios.com.br/#website",
       url: "https://fastfreios.com.br/",
       name: "Fast Freios Piracicaba",
-      description: "Especialistas em freios automotivos em Piracicaba SP",
+      description: "Especialistas em freios e suspensão automotiva em Piracicaba SP",
       inLanguage: "pt-BR",
       publisher: { "@id": "https://fastfreios.com.br/#business" },
     },
@@ -121,6 +128,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <Brands />
         <Pillars />
         <Ticker />
         <Services />
@@ -130,8 +138,11 @@ const Index = () => {
         <Testimonials />
         <Faq />
         <CtaBanner />
+        <CheckupForm />
+        <MapSection />
       </main>
       <Footer />
+      <WhatsAppButton />
 
       <script
         type="application/ld+json"

@@ -1,4 +1,4 @@
-import { Disc3, Droplets, Wrench, Gauge, Search, CircuitBoard, ArrowUpRight } from "lucide-react";
+import { Disc3, Droplets, Wrench, Gauge, Search, CircuitBoard, Car, Sliders, Wind, ArrowUpRight } from "lucide-react";
 
 const services = [
   { icon: Disc3, title: "Pastilhas de Freio", desc: "Troca com peças de marcas premium e garantia real." },
@@ -7,6 +7,9 @@ const services = [
   { icon: Wrench, title: "Revisão Completa", desc: "Checklist de 20 pontos no sistema de freio do seu carro." },
   { icon: Search, title: "Diagnóstico Grátis", desc: "Avaliação completa do sistema de freio. Sem custo, sem enrolação." },
   { icon: CircuitBoard, title: "Freio ABS", desc: "Diagnóstico eletrônico e reparo de módulo e sensores." },
+  { icon: Car, title: "Suspensão Completa", desc: "Amortecedores, molas, bandejas e buchas — tudo que mantém o carro firme na pista." },
+  { icon: Sliders, title: "Alinhamento e Balanceamento", desc: "Corrige direção, reduz desgaste dos pneus e garante conforto na direção." },
+  { icon: Wind, title: "Calibração de Nitrogênio", desc: "Encha os pneus com nitrogênio puro: pressão mais estável e maior durabilidade." },
 ];
 
 export const Services = () => (
@@ -18,12 +21,12 @@ export const Services = () => (
             // Serviços
           </div>
           <h2 className="font-display text-5xl md:text-7xl uppercase text-foreground leading-none">
-            Tudo de freio<br />
-            <span className="text-primary">no mesmo lugar.</span>
+            Tudo que o seu carro<br />
+            <span className="text-primary">precisa, no mesmo lugar.</span>
           </h2>
         </div>
         <p className="max-w-md text-muted-foreground">
-          Da pastilha ao módulo ABS — cuidamos de tudo que faz o seu carro parar com segurança.
+          De freios a suspensão — cuidamos de tudo que faz o seu carro parar e andar com segurança.
         </p>
       </div>
 

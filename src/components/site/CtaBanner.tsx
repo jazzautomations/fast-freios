@@ -16,10 +16,10 @@ export const CtaBanner = () => (
         </div>
         <div className="lg:col-span-4 flex flex-col gap-4">
           <a
-            href="#contato"
+            href="#checkup"
             className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-background text-foreground font-bold uppercase text-sm tracking-widest hover:bg-foreground hover:text-background transition shadow-deep"
           >
-            Agende Agora <ArrowRight className="h-4 w-4" />
+            Checkup Gratuito <ArrowRight className="h-4 w-4" />
           </a>
           <a
             href="https://wa.me/5519999338747"
@@ -27,7 +27,7 @@ export const CtaBanner = () => (
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-5 border-2 border-background text-background font-bold uppercase text-sm tracking-widest hover:bg-background hover:text-foreground transition"
           >
-            <MessageCircle className="h-4 w-4" /> Chama no Whats
+            <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
         </div>
       </div>
