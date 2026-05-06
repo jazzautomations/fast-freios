@@ -3,13 +3,13 @@ import { ShieldCheck } from "lucide-react";
 const brands = [
   {
     name: "Fremax",
-    logo: "/logo-fremax.png",
+    logo: "/logo-fremax-transparent.png",
     desc: "Discos e tambores de freio",
     url: "https://www.fremax.com.br",
   },
   {
     name: "Fras-le",
-    logo: "/logo-frasle.jpg",
+    logo: "/logo-frasle-transparent.png",
     desc: "Pastilhas e lonas de freio",
     url: "https://www.frasle.com",
   },
