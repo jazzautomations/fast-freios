@@ -87,7 +87,7 @@ export const Footer = () => (
           <ul className="space-y-1 text-sm text-muted-foreground">
             <li>Seg–Sex: 07:30 – 18h</li>
             <li className="text-xs">12h–13h almoço</li>
-            <li className="mt-2">Sábado: 07:30 – 13h</li>
+            <li className="mt-2">Sábado: Fechado</li>
             <li>Domingo: fechado</li>
           </ul>
         </div>

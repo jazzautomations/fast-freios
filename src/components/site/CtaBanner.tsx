@@ -51,7 +51,7 @@ export const CtaBanner = () => (
           <Clock className="h-5 w-5 mt-0.5" />
           <div>
             <div className="font-display text-lg uppercase">Domingo</div>
-            <div className="text-sm opacity-90">Fechado — emergência via WhatsApp</div>
+            <div className="text-sm opacity-90">Fechado</div>
           </div>
         </div>
       </div>
