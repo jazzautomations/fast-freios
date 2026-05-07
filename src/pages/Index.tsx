@@ -91,15 +91,16 @@ const jsonLd = {
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "07:30",
-          closes: "18:00",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:30",
+          "closes": "18:00",
         },
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Saturday",
-          opens: "07:30",
-          closes: "13:00",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "00:00",
+          "description": "Fechado",
         },
       ],
       sameAs: [
@@ -185,6 +186,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      {/* Fachada da oficina */}
+      <div className="relative w-full pt-16 md:pt-20">
+        <img
+          src="/shop-wide.png"
+          alt="Fast Freios — Oficina especializada em freios em Piracicaba"
+          className="w-full object-contain object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/70" />
+      </div>
+      
       <main>
         <Hero />
         <Brands />

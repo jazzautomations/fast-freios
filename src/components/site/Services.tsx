@@ -12,13 +12,13 @@ const services = [
     icon: Gauge,
     title: "Discos de Freio",
     short: "Avaliação de espessura e substituição quando necessário.",
-    expanded: "Disco fora da spec? Substituímos com disco ou tambor novo, com beveling dos lábios para evitar vibração. Afiação de disco quando possível. Freio silencioso e uniforme na direção.",
+    expanded: "Disco fora de medida? Substituímos com disco ou tambor novo Fremax, com retífica dos lábios para evitar vibração. Retífica de disco quando possível. Freio silencioso e sem trepidação na frenagem.",
   },
   {
     icon: Droplets,
     title: "Fluido de Freio",
     short: "Sangria e troca completa para resposta firme do pedal.",
-    expanded: "Fluido degradado é perigo invisível. Fazemos sangria completa do sistema — ar nas tubulações sai, pedal firme como novo. DOT 4 ou DOT 5.1 conforme especificação do seu veículo.",
+    expanded: "Fluido degradado é perigo invisível. Fazemos sangria completa do sistema — ar nas tubulações sai, pedal firme como novo. Utilizamos o DOT conforme especificação de cada montadora.",
   },
   {
     icon: Wrench,
@@ -30,19 +30,19 @@ const services = [
     icon: Search,
     title: "Diagnóstico Grátis",
     short: "Avaliação completa do sistema de freio. Sem custo, sem enrolação.",
-    expanded: "Chegou, diagnostics em 20 minutos, laudo técnico na mão. Sem compromisso, sem cobrança oculta. Se o freio estiver bom, a gente fala. Se precisar fazer, você decide — sem pressão.",
+    expanded: "Chegou, diagnóstico em 20 minutos, laudo técnico na mão. Sem compromisso, sem cobrança oculta. Se o freio estiver bom, a gente fala. Se precisar fazer, você decide — sem pressão.",
   },
   {
     icon: CircuitBoard,
     title: "Freio ABS",
     short: "Diagnóstico eletrônico e reparo de módulo e sensores.",
-    expanded: "Luz do ABS acesa? Fazemos scan diagnóstico no módulo ABS, identificamos falha de sensor, ring ou módulo. Reparo ou substituição conforme necessidade. Teste final antes da entrega.",
+    expanded: "Luz do ABS acesa? Fazemos scan diagnóstico no módulo ABS, identificamos falha de sensor, anel ou módulo. Módulo do ABS — já temos a reparação e instalação necessária para seu veículo. Teste final antes da entrega.",
   },
   {
     icon: Car,
     title: "Suspensão Completa",
     short: "Amortecedores, molas, bandejas e buchas — tudo que mantém o carro firme na pista.",
-    expanded: "Amortecedor vazando, mola quebrada, bandeja com folga? Substituímos todo o sistema de suspensão com peças de marcas consolidadas. Geometria e alinhamento pós-serviço incluso.",
+    expanded: "Amortecedor vazando, mola quebrada, bandeja com folga? Substituímos todo o sistema de suspensão com peças Nakata. Geometria e alinhamento pós-serviço incluso.",
   },
   {
     icon: Sliders,
@@ -54,7 +54,7 @@ const services = [
     icon: Wind,
     title: "Calibração de Nitrogênio",
     short: "Encha os pneus com nitrogênio puro: pressão mais estável e maior durabilidade.",
-    expanded: "Nitrogênio mantém a pressão estável, reduz oxidação interna do pneu e evita variações por temperatura. Indicado para quem roda muito ou quer maior vida útil dos pneus com menor perda de pressão.",
+    expanded: "Nitrogênio mantém a pressão estável por até 6 meses, reduz oxidação interna do pneu e evita variações por temperatura. Indicado para quem roda muito ou quer maior vida útil dos pneus com menor perda de pressão.",
   },
 ];
 
@@ -96,12 +96,12 @@ export const Services = () => {
                     className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${isOpen ? "rotate-180 text-primary" : ""}`}
                   />
                 </div>
-                <h3 className="font-display text-2xl uppercase text-foreground mb-2">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{short}</p>
+                <h3 className="font-display text-2xl uppercase text-foreground mb-3">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-2">{short}</p>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-48 mt-4 opacity-100" : "max-h-0 mt-0 opacity-0"}`}
+                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}
                 >
-                  <p className="text-xs text-foreground/60 leading-relaxed border-t border-border pt-4">
+                  <p className="text-sm text-foreground/80 leading-loose border-t border-border pt-4">
                     {expanded}
                   </p>
                 </div>

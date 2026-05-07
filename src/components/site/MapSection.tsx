@@ -34,8 +34,8 @@ export const MapSection = () => (
             <div>
               <div className="font-bold text-foreground mb-0.5">Horário de atendimento</div>
               <div className="text-muted-foreground">
-                Seg – Sex: 07:30 às 18:00 <span className="text-xs">(almoço 12h–13h)</span><br />
-                Sábado: 07:30 às 13:00<br />
+                Seg – Sex: 07:30 às 18:00<br />
+                Sábado: Fechado<br />
                 Domingo: Fechado
               </div>
             </div>

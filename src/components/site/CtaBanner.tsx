@@ -37,14 +37,14 @@ export const CtaBanner = () => (
           <Clock className="h-5 w-5 mt-0.5" />
           <div>
             <div className="font-display text-lg uppercase">Seg a Sex</div>
-            <div className="text-sm opacity-90">07:30 às 18:00 (almoço 12h–13h)</div>
+            <div className="text-sm opacity-90">07:30 às 18:00</div>
           </div>
         </div>
         <div className="flex items-start gap-3">
           <Clock className="h-5 w-5 mt-0.5" />
           <div>
-            <div className="font-display text-lg uppercase">Sábado</div>
-            <div className="text-sm opacity-90">07:30 às 13:00</div>
+            <div className="font-display text-lg uppercase">Sáb</div>
+            <div className="text-sm opacity-90">Fechado</div>
           </div>
         </div>
         <div className="flex items-start gap-3">

@@ -38,20 +38,20 @@ export const Brands = () => (
         </div>
 
         <div className="flex-1">
-          <div className="flex md:grid md:grid-cols-3 gap-3 overflow-x-auto md:overflow-visible -mx-3 px-3 md:mx-0 md:px-0 md:gap-4">
+          <div className="grid grid-cols-3 gap-3 md:gap-6">
             {brands.map((b) => (
               <div
                 key={b.name}
-                className="group flex-shrink-0 w-[140px] md:w-auto flex flex-col items-center justify-center gap-2.5 bg-transparent p-4 md:p-6"
+                className="group flex flex-col items-center justify-center gap-2 bg-transparent p-3 md:p-6"
               >
-                <div className="h-12 md:h-14 flex items-center justify-center w-full">
+                <div className="h-10 md:h-14 flex items-center justify-center w-full">
                   <img
                     src={b.logo}
                     alt={`Logo ${b.name}`}
-                    className="max-h-12 md:max-h-14 max-w-[160px] w-auto object-contain"
+                    className="max-h-10 md:max-h-14 max-w-[120px] md:max-w-[160px] w-auto object-contain"
                   />
                 </div>
-                <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-semibold text-center leading-tight">
+                <span className="text-[8px] md:text-[9px] uppercase tracking-widest text-muted-foreground font-semibold text-center leading-tight">
                   {b.desc}
                 </span>
               </div>

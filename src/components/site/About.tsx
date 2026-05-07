@@ -4,13 +4,13 @@ import mechanic from "@/assets/mechanic.jpg";
 const points = [
   "Diagnóstico grátis em 20 minutos, sem enrolação",
   "Peças com garantia e nota fiscal",
-  "Mecânicos especialistas em freios e suspensão",
+  "Mecânicos especialistas em sistema de freio",
   "Atendimento direto, popular e transparente",
 ];
 
 const stats = [
-  { n: "+10mil", l: "Revisões realizadas" },
-  { n: "5★", l: "Avaliação Google" },
+  { n: "+10mil", l: "Freios revisados" },
+  { n: "4.9★", l: "Avaliação Google" },
   { n: "20min", l: "Diagnóstico" },
   { n: "100%", l: "Garantia" },
 ];

@@ -4,13 +4,11 @@ import heroBrake from "@/assets/hero-brake.jpg";
 export const Hero = () => {
   return (
     <section id="top" className="relative pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
-      {/* Decorative diagonal stripes — top right corner, contained */}
+      {/* Decorative diagonal stripes */}
       <div
         aria-hidden
-        className="absolute top-0 right-0 w-48 h-48 overflow-hidden pointer-events-none"
-      >
-        <div className="absolute -top-4 -right-4 w-56 h-56 diagonal-stripes opacity-60 clip-angular" />
-      </div>
+        className="absolute -top-10 right-0 w-72 h-32 diagonal-stripes opacity-70 clip-angular"
+      />
       <div
         aria-hidden
         className="absolute bottom-10 left-0 w-40 h-10 diagonal-stripes-muted opacity-80"
@@ -27,11 +25,11 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[110px] uppercase leading-[1.1] text-foreground tracking-wide">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[110px] uppercase leading-[0.88] text-foreground">
             Segurança
-            <br className="my-4" />
+            <br />
             em qualquer
-            <br className="my-4" />
+            <br />
             <span className="relative inline-block">
               <span className="relative z-10 text-primary">parada.</span>
               <span aria-hidden className="absolute inset-x-0 bottom-2 h-3 bg-primary/20 blur-md" />
@@ -43,16 +41,16 @@ export const Hero = () => {
           </p>
 
           <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            Especialistas em freios e suspensão automotiva. Pastilhas, discos, fluido, amortecedores e revisão completa
+            Especialistas em freios automotivos. Pastilhas, discos, fluido e revisão completa
             com peças garantidas e mão de obra que resolve hoje — sem enrolação.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="#checkup"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-widest hover:brightness-110 transition orange-glow"
+              href="#contato"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-widest clip-notch hover:brightness-110 transition orange-glow"
             >
-              Checkup Gratuito <ArrowRight className="h-4 w-4" />
+              Agende Agora <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="https://wa.me/5519999338747"
@@ -60,16 +58,16 @@ export const Hero = () => {
               rel="noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary text-primary font-bold uppercase text-sm tracking-widest hover:bg-primary hover:text-primary-foreground transition"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <MessageCircle className="h-4 w-4" /> Chama no Whats
             </a>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase font-semibold tracking-widest text-muted-foreground">
             <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-primary" /> +10 mil revisões
+              <span className="h-1.5 w-1.5 bg-primary" /> +10 mil freios revisados
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-primary" /> 5★ no Google
+              <span className="h-1.5 w-1.5 bg-primary" /> 4.9★ no Google
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 bg-primary" /> 100% garantia
@@ -77,8 +75,8 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-6 relative">
-          <div className="relative aspect-[4/3] bg-surface border border-border overflow-hidden clip-notch">
+        <div className="lg:col-span-5 relative">
+          <div className="relative aspect-square bg-surface border border-border overflow-hidden clip-notch">
             <img
               src={heroBrake}
               alt="Disco de freio incandescente em carro esportivo preto"
