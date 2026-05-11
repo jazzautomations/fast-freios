@@ -32,25 +32,18 @@ export const CtaBanner = () => (
         </div>
       </div>
 
-      <div className="mt-14 pt-10 border-t border-primary-foreground/20 grid sm:grid-cols-3 gap-6">
+      <div className="mt-14 pt-10 border-t border-primary-foreground/20 grid sm:grid-cols-2 gap-6">
         <div className="flex items-start gap-3">
           <Clock className="h-5 w-5 mt-0.5" />
           <div>
-            <div className="font-display text-lg uppercase">Seg a Sex</div>
+            <div className="font-display text-lg uppercase">Seg–Sex</div>
             <div className="text-sm opacity-90">07:30 às 18:00</div>
           </div>
         </div>
         <div className="flex items-start gap-3">
           <Clock className="h-5 w-5 mt-0.5" />
           <div>
-            <div className="font-display text-lg uppercase">Sáb</div>
-            <div className="text-sm opacity-90">Fechado</div>
-          </div>
-        </div>
-        <div className="flex items-start gap-3">
-          <Clock className="h-5 w-5 mt-0.5" />
-          <div>
-            <div className="font-display text-lg uppercase">Domingo</div>
+            <div className="font-display text-lg uppercase">Sáb–Dom</div>
             <div className="text-sm opacity-90">Fechado</div>
           </div>
         </div>

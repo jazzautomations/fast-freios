@@ -5,20 +5,20 @@ const services = [
   {
     icon: Disc3,
     title: "Pastilhas de Freio",
-    short: "Troca com peças de marcas premium e garantia real.",
-    expanded: "Trabalhamos com pastilhas Fremax, Fras-le e Nakata — marcas que você confere na Oficina Autorizada. Nosso técnico avalia o estado das suas pastilhas, explica o que foi encontrado e só substitui se realmente precisa. Troca com garantia de mão de obra.",
+    short: "Troca com peças Frasle de qualidade garantida.",
+    expanded: "Trabalhamos com pastilhas Frasle — marca reconhecida pela durabilidade e performance. Nosso técnico avalia o estado das suas pastilhas, explica o que foi encontrado e só substitui se realmente precisa. Troca com garantia de mão de obra e peça.",
   },
   {
     icon: Gauge,
     title: "Discos de Freio",
-    short: "Avaliação de espessura e substituição quando necessário.",
-    expanded: "Disco fora de medida? Substituímos com disco ou tambor novo Fremax, com retífica dos lábios para evitar vibração. Retífica de disco quando possível. Freio silencioso e sem trepidação na frenagem.",
+    short: "Verificação de medida, retífica ou substituição com Fremax.",
+    expanded: "Verificamos se o disco está fora de medida. Substituímos com discos Fremax quando necessário, ou fazemos retífica do disco quando ainda é possível. Resultado: freio silencioso e sem trepidação na frenagem.",
   },
   {
     icon: Droplets,
     title: "Fluido de Freio",
-    short: "Sangria e troca completa para resposta firme do pedal.",
-    expanded: "Fluido degradado é perigo invisível. Fazemos sangria completa do sistema — ar nas tubulações sai, pedal firme como novo. Utilizamos o DOT conforme especificação de cada montadora.",
+    short: "Troca com fluido DOT conforme especificação da montadora.",
+    expanded: "Fluido velho perde eficiência e coloca em risco. Fazemos sangria completa do sistema, eliminamos bolhas de ar e colocamos fluido DOT novo conforme a especificação de cada montadora. Pedal firme e resposta imediata.",
   },
   {
     icon: Wrench,
@@ -35,26 +35,26 @@ const services = [
   {
     icon: CircuitBoard,
     title: "Freio ABS",
-    short: "Diagnóstico eletrônico e reparo de módulo e sensores.",
-    expanded: "Luz do ABS acesa? Fazemos scan diagnóstico no módulo ABS, identificamos falha de sensor, anel ou módulo. Módulo do ABS — já temos a reparação e instalação necessária para seu veículo. Teste final antes da entrega.",
+    short: "Diagnóstico eletrônico, reparação e instalação do sistema.",
+    expanded: "Luz do ABS acesa? Fazemos diagnóstico eletrônico completo, identificamos falha de sensor, anel ou módulo. A Fast Freios já conta com reparação e instalação necessária para o sistema ABS do seu veículo. Teste final antes da entrega.",
   },
   {
     icon: Car,
     title: "Suspensão Completa",
-    short: "Amortecedores, molas, bandejas e buchas — tudo que mantém o carro firme na pista.",
-    expanded: "Amortecedor vazando, mola quebrada, bandeja com folga? Substituímos todo o sistema de suspensão com peças Nakata. Geometria e alinhamento pós-serviço incluso.",
+    short: "Amortecedores, molas, bandejas e buchas Nakata — tudo que mantém o carro firme na pista.",
+    expanded: "Amortecedor vazando, mola quebrada, bandeja com folga? Substituímos todo o sistema de suspensão com componentes Nakata. Geometria e alinhamento pós-serviço incluso.",
   },
   {
     icon: Sliders,
     title: "Alinhamento e Balanceamento",
-    short: "Corrige direção, reduz desgaste dos pneus e garante conforto na direção.",
-    expanded: "Direção puxando para um lado? Vibrando no volante? Alinhamos geometria 3D computadorizado e balanceamos rodas com pesos internos. Segurança e economia de combustível na mesma visita.",
+    short: "Corrige direção, reduz desgaste dos pneus e economiza combustível.",
+    expanded: "Direção puxando para um lado? Vibrando no volante? Alinhamos geometria 3D computadorizado e balanceamos rodas com pesos internos. Segurança, conforto e economia de combustível na mesma visita.",
   },
   {
     icon: Wind,
     title: "Calibração de Nitrogênio",
-    short: "Encha os pneus com nitrogênio puro: pressão mais estável e maior durabilidade.",
-    expanded: "Nitrogênio mantém a pressão estável por até 6 meses, reduz oxidação interna do pneu e evita variações por temperatura. Indicado para quem roda muito ou quer maior vida útil dos pneus com menor perda de pressão.",
+    short: "Pressão estável por até 6 meses, menor desgaste e mais segurança.",
+    expanded: "Nitrogênio mantém a pressão estável por até 6 meses, reduz oxidação interna do pneu e evita variações por temperatura. Indicado para quem roda muito ou quer maior durabilidade dos pneus com menor perda de pressão.",
   },
 ];
 

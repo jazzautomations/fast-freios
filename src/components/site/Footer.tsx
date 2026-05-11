@@ -84,12 +84,22 @@ export const Footer = () => (
 
         <div className="lg:col-span-2">
           <h4 className="font-display text-xl uppercase mb-5 text-foreground">Horário</h4>
-          <ul className="space-y-1 text-sm text-muted-foreground">
-            <li>Seg–Sex: 07:30 – 18h</li>
-            <li className="text-xs">12h–13h almoço</li>
-            <li className="mt-2">Sábado: Fechado</li>
-            <li>Domingo: fechado</li>
-          </ul>
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-16 h-7 bg-primary/10 border border-primary/30 text-primary text-xs font-bold rounded">
+                SEG–SEX
+              </span>
+              <span className="text-foreground font-medium">07:30 – 18:00</span>
+            </div>
+            <p className="text-xs text-muted-foreground pl-[76px]">Intervalo: 12h – 13h</p>
+            
+            <div className="flex items-center gap-3 pt-2 border-t border-border/50">
+              <span className="inline-flex items-center justify-center w-16 h-7 bg-muted/30 border border-border text-muted-foreground text-xs font-bold rounded">
+                SÁB–DOM
+              </span>
+              <span className="text-muted-foreground">Fechado</span>
+            </div>
+          </div>
         </div>
       </div>
 
