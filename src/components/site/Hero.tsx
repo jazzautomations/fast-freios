@@ -67,7 +67,7 @@ export const Hero = () => {
               <span className="h-1.5 w-1.5 bg-primary" /> +10 mil freios revisados
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-primary" /> 4.9★ no Google
+              <span className="h-1.5 w-1.5 bg-primary" /> 5★ no Google
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 bg-primary" /> 100% garantia

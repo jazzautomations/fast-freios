@@ -10,7 +10,7 @@ const points = [
 
 const stats = [
   { n: "+10mil", l: "Freios revisados" },
-  { n: "4.9★", l: "Avaliação Google" },
+  { n: "5★", l: "Avaliação Google" },
   { n: "20min", l: "Diagnóstico" },
   { n: "100%", l: "Garantia" },
 ];
